@@ -21,20 +21,28 @@ const parameters = {
 };
 
 const props = {
+  animated: {
+    control: { type: "boolean" },
+    description:
+      "If true, adds a shimmer animation to indicate activity when progress is stuck.",
+    table: {
+      defaultValue: { summary: false },
+    },
+  },
+  appearance: {
+    control: { type: "select" },
+    description: "Determines the color scheme of the progress bar.",
+    options: appearances,
+    table: {
+      defaultValue: { summary: "primary" },
+    },
+  },
   height: {
     control: { type: "text" },
     description:
       "Sets the height of the progress bar, allowing customization of its thickness.",
     table: {
       defaultValue: { summary: "4px" },
-    },
-  },
-  appearance: {
-    options: appearances,
-    control: { type: "select" },
-    description: "Determines the color scheme of the progress bar.",
-    table: {
-      defaultValue: { summary: "primary" },
     },
   },
   progress: {
@@ -44,15 +52,7 @@ const props = {
       defaultValue: { summary: 0 },
     },
   },
-  animated: {
-    control: { type: "boolean" },
-    description:
-      "If true, adds a shimmer animation to indicate activity when progress is stuck.",
-    table: {
-      defaultValue: { summary: false },
-    },
-  },
 };
 
-export { props, parameters };
+export { parameters, props };
 export type { IProgressBarAppearance };

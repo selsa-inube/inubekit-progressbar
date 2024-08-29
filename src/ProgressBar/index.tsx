@@ -2,28 +2,28 @@ import { IProgressBarAppearance } from "./props";
 import { StyledProgressBar } from "./styles";
 
 interface IProgressBar {
-  height?: string;
-  appearance?: IProgressBarAppearance;
-  progress: number;
   animated?: boolean;
+  appearance?: IProgressBarAppearance;
+  height?: string;
+  progress: number;
 }
 
 const ProgressBar = (props: IProgressBar) => {
   const {
-    height = "4px",
-    appearance = "primary",
-    progress = 0,
     animated = false,
+    appearance = "primary",
+    height = "4px",
+    progress = 0,
   } = props;
 
   const safeProgress = Math.min(100, Math.max(0, progress));
 
   return (
     <StyledProgressBar
-      $height={height}
-      $appearance={appearance}
-      $progress={safeProgress}
       $animated={animated}
+      $appearance={appearance}
+      $height={height}
+      $progress={safeProgress}
     />
   );
 };

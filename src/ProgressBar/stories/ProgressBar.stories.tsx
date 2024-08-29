@@ -4,7 +4,7 @@ import { parameters, props } from "../props";
 import { ProgressBarController } from "./ProgressBar.controller";
 
 const story = {
-  title: "Components/ProgressBar",
+  title: "feedback/ProgressBar",
   component: ProgressBarController,
   argTypes: props,
   parameters,
