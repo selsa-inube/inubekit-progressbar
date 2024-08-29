@@ -1,3 +1,15 @@
+# v1.0.1 (Thu Aug 29 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: adjust story in order sort in the right folder ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v1.0.0 (Thu Aug 29 2024)
 
 #### 💥 Breaking Change
