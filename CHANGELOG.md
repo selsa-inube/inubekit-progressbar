@@ -1,3 +1,15 @@
+# v1.0.2 (Fri Aug 30 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat: added onComplete callback ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v1.0.1 (Thu Aug 29 2024)
 
 #### ⚠️ Pushed to `main`
