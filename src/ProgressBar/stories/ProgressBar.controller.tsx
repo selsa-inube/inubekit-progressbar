@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { ProgressBar } from "../index";
+import { IProgressBar, ProgressBar } from "../index";
 import { StyledText } from "./styles";
 
-const ProgressBarController = () => {
+const ProgressBarController = (props: IProgressBar) => {
+  const { onComplete } = props;
   const [progress, setProgress] = useState(0);
   const [isStuck, setIsStuck] = useState(false);
 
@@ -17,10 +18,10 @@ const ProgressBarController = () => {
         if (prevProgress >= 50 && prevProgress < 70) {
           setIsStuck(true);
           return prevProgress;
-        } else {
-          setIsStuck(false);
-          return prevProgress + 0.5;
         }
+
+        setIsStuck(false);
+        return prevProgress + 0.5;
       });
     }, 100);
 
@@ -30,10 +31,10 @@ const ProgressBarController = () => {
   return (
     <div>
       <ProgressBar
+        {...props}
         progress={progress}
         animated={isStuck}
-        appearance="primary"
-        height="8px"
+        onComplete={onComplete}
       />
       <StyledText>Current Progress: {progress.toFixed(1)}%</StyledText>
       {isStuck && (

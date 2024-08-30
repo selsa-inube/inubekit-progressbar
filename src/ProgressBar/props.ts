@@ -52,6 +52,11 @@ const props = {
       defaultValue: { summary: 0 },
     },
   },
+  onComplete: {
+    control: { type: "function" },
+    description:
+      "Callback function that is triggered when progress reaches 100%.",
+  },
 };
 
 export { parameters, props };
