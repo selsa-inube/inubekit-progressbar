@@ -36,7 +36,7 @@ const StyledProgressBar = styled.div`
         width: 100%;
         background: ${({ theme }) => `linear-gradient(
           100deg,
-          ${theme?.progressbar?.[$appearance]?.track.color || inube.progressbar[$appearance].track.color} 0%,
+          ${theme?.progressbar?.[$appearance]?.track.color || inube.progressbar[$appearance].track.color} 25%,
           ${theme?.progressbar?.[$appearance]?.animation.color || inube.progressbar[$appearance].animation.color} 50%,
           ${theme?.progressbar?.[$appearance]?.track.color || inube.progressbar[$appearance].track.color} 100%
         );`};
