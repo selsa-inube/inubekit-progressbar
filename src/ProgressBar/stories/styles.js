@@ -10,7 +10,7 @@ const StyledText = styled.p`
   margin: 0;
   padding: 0;
   text-align: start;
-  color: ${inube.text.primary.content.color.regular};
+  color: ${inube.palette.blue.B400};
 `;
 
 export { StyledText };

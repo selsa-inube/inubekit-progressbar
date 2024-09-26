@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
-import { inube } from "@inubekit/foundations"; 
+import { tokens } from "./Tokens/tokens";
 
 const shimmer = keyframes`
   0% {
@@ -16,7 +16,7 @@ const StyledProgressBar = styled.div`
   background-color: ${({ theme, $appearance }) => {
     return (
       theme?.progressbar?.[$appearance]?.background.color ||
-      inube.progressbar[$appearance].background.color
+      tokens[$appearance].background.color
     );
   }};
   transition: width 0.4s ease;
@@ -27,7 +27,7 @@ const StyledProgressBar = styled.div`
       position: relative;
       overflow: hidden;
       background: ${theme?.progressbar?.[$appearance]?.animation.color ||
-      inube.progressbar[$appearance].animation.color};
+      tokens[$appearance].animation.color};
 
       &::after {
         content: "";
@@ -36,9 +36,9 @@ const StyledProgressBar = styled.div`
         width: 100%;
         background: ${({ theme }) => `linear-gradient(
           90deg,
-          ${theme?.progressbar?.[$appearance]?.track.color || inube.progressbar[$appearance].track.color} 25%,
-          ${theme?.progressbar?.[$appearance]?.animation.color || inube.progressbar[$appearance].animation.color} 50%,
-          ${theme?.progressbar?.[$appearance]?.track.color || inube.progressbar[$appearance].track.color} 100%
+          ${theme?.progressbar?.[$appearance]?.track.color || tokens[$appearance].track.color} 25%,
+          ${theme?.progressbar?.[$appearance]?.animation.color || tokens[$appearance].animation.color} 50%,
+          ${theme?.progressbar?.[$appearance]?.track.color || tokens[$appearance].track.color} 100%
           
         );`};
         animation: ${shimmer} 2s linear infinite;
